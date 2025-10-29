@@ -23,7 +23,7 @@ def gausian(x,amplitude,center,width):
 def fit_gaussian(x,y, peak, point_amount, width_guess):
     """
     Using scipy's curve_fit function, 
-    fit the gaussian of each peak with bounds and estimated values to be known
+    fit the gaussian of each peak with bounds and estimated values both of which are taken to be known
     """
 
     # only data above 0 is important here, thus any data below 0, meaning less than 0 energy is ignored.
@@ -67,7 +67,7 @@ def plot_data(speeds, point_amount, width_guess, peak_prominence):
 
     """
 
-    #Expected values from theory 
+    #Expected values from theory for NeXHe
     energy_centers = [1021.5, 1211.0, 1277.0, 1308.0]
     search_range = 15 #TODO - WHAT IS THIS
 
@@ -77,7 +77,7 @@ def plot_data(speeds, point_amount, width_guess, peak_prominence):
 
     for index, speed in enumerate(speeds):
         #find file, must follow below naming convention
+        
         path = f"Ne10He{speed}kms.csv"
-
-        try = 
+        
 
